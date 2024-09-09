@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables in JavaScript</title>
+    
+  </head>
+    <h1>Variables in JavaScript</h1>
+    <h2>A JavaScript variable is just a name of storage location.</h2>
+    <p>And we can give that name in three ways.</p>
+    <ul>
+      <li>Using <code>let</code> keyword.</li>
+      <li>Using <code>const</code> keyword.</li>
+      <li>Using <code>var</code> keyword.</li>
+    </ul>
+
+    <div>
+        <h1>Difference between <code>let</code>, <code>const</code>, and <code>var</code></h1>
+
+        <h2><code>var</code></h2>
+        <ul>
+            <li><strong>Function-scoped</strong>: It's accessible within the function where it's declared.</li>
+            <li><strong>Hoisting</strong>: Can be used even before it's declared (but it's initialized as <code>undefined</code>).</li>
+            <li><strong>Re-declaration allowed</strong>: You can declare the same variable multiple times.</li>
+        </ul>
+        
+
+        <h2><code>let</code></h2>
+        <ul>
+            <li><strong>Block-scoped</strong>: Only accessible within the block <code>{}</code> where it's declared.</li>
+            <li><strong>No hoisting</strong>: Cannot be used before declaration.</li>
+            <li><strong>No re-declaration</strong>: You cannot declare the same variable twice in the same scope.</li>
+        </ul>
+
+
+        <h2><code>const</code></h2>
+        <ul>
+            <li><strong>Block-scoped</strong>: Same as <code>let</code>, only within the block <code>{}</code>.</li>
+            <li><strong>Constant value</strong>: Once assigned, it cannot be reassigned (but objects or arrays can be modified).</li>
+            <li><strong>No hoisting</strong> and <strong>No re-declaration</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>JavaScript Variable Declaration Rules</h1>
+
+        <h2>1. Use <code>var</code>, <code>let</code>, or <code>const</code> for Variable Declarations</h2>
+        <p>Always use <code>var</code>, <code>let</code>, or <code>const</code> to declare variables. If you don't, JavaScript will create a global variable, which can lead to errors.</p>
+        <pre><code>var x = 10;    // OK
+let y = 20;    // OK
+const z = 30;  // OK</code></pre>
+
+        <h2>2. Variable Names</h2>
+        <ul>
+            <li>Must start with a letter, underscore (<code>_</code>), or dollar sign (<code>$</code>).</li>
+            <li>Cannot start with a number.</li>
+            <li>Variable names are <strong>case-sensitive</strong> (e.g., <code>myVar</code> and <code>myvar</code> are different).</li>
+            <li>Avoid using <strong>reserved words</strong> (like <code>if</code>, <code>for</code>, <code>class</code>).</li>
+        </ul>
+        <pre><code>let _myVar = 5;  // OK
+let $money = 100;  // OK
+let 1stPlace = 3;  // Error: Cannot start with a number</code></pre>
+
+        <h2>3. Avoid Re-declaring with <code>let</code> and <code>const</code></h2>
+        <p>You cannot re-declare a variable using <code>let</code> or <code>const</code> in the same scope. <code>var</code> allows re-declaration, but it's better to avoid it to prevent confusion.</p>
+        <pre><code>let a = 10;
+// let a = 20;  // Error: Cannot re-declare
+
+var b = 5;
+var b = 10;  // Allowed but should be avoided</code></pre>
+
+        <h2>4. <code>const</code> Requires Initialization</h2>
+        <p>Variables declared with <code>const</code> must be initialized at the time of declaration, and once assigned, they cannot be reassigned.</p>
+        <pre><code>const PI = 3.14;
+// PI = 3.14159;  // Error: Cannot reassign
+
+const x;  // Error: Missing initialization</code></pre>
+
+        <h2>5. Block Scope for <code>let</code> and <code>const</code></h2>
+        <p><code>let</code> and <code>const</code> are block-scoped, meaning they are only accessible within the block <code>{}</code> where they are declared. <code>var</code> is function-scoped, meaning it is accessible throughout the function.</p>
+        <pre><code>if (true) {
+    let blockVar = "I'm block-scoped";
+    var funcVar = "I'm function-scoped";
+}
+
+// console.log(blockVar);  // Error: blockVar is not defined
+console.log(funcVar);  // OK: "I'm function-scoped"</code></pre>
+
+        <h2>6. Hoisting</h2>
+        <p><code>var</code> is hoisted to the top of its scope and initialized as <code>undefined</code>. <code>let</code> and <code>const</code> are hoisted but not initialized, so they cannot be used before being declared.</p>
+        <pre><code>console.log(x);  // undefined (due to var hoisting)
+var x = 10;
+
+console.log(y);  // Error: Cannot access 'y' before initialization
+let y = 20;</code></pre>
+
+        <h2>7. Best Practice for Declaration</h2>
+        <ul>
+            <li>Use <code>const</code> for variables that should not change.</li>
+            <li>Use <code>let</code> for variables that will be reassigned.</li>
+            <li>Avoid using <code>var</code> unless you're working with older or legacy code.</li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
