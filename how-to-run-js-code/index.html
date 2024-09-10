@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Hoisting Example</title>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <h1>JavaScript Variables Example: var, let, const</h1>
+
+  <!-- Section to display the result of the code -->
+  <p id="intro"></p>
+
+  <!-- Explanation of the code -->
+  <h2>Code Explanation</h2>
+  <p>
+    <strong>var firstName = 'Akash';</strong><br>
+    The <code>firstName</code> variable is declared using <code>var</code>, which is hoisted to the top of its scope and initialized as <code>undefined</code> in the memory allocation phase. Afterward, during the execution phase, it is assigned the value <strong>'Akash'</strong>.
+  </p>
+
+  <p>
+    <strong>let lastName = 'Singh';</strong><br>
+    The <code>lastName</code> variable is declared using <code>let</code>. It is hoisted but remains uninitialized in the memory allocation phase (it enters the Temporal Dead Zone). The assignment happens during execution, where it gets the value <strong>'Singh'</strong>.
+  </p>
+
+  <p>
+    <strong>let age = 15;</strong><br>
+    Similar to <code>lastName</code>, the <code>age</code> variable is hoisted but uninitialized until it reaches this line during execution. It is then assigned the value <strong>15</strong>.
+  </p>
+
+  <p>
+    <strong>const yearOfBirth = 1999;</strong><br>
+    The <code>yearOfBirth</code> variable is declared with <code>const</code>, meaning it must be initialized at the time of declaration and cannot be reassigned later. Like <code>let</code>, it is hoisted but not initialized until execution, and attempting to access it beforehand would cause a ReferenceError.
+  </p>
+
+  <p>
+    <strong>String Concatenation:</strong><br>
+    <code>let userIntro = 'Hi, my name is ' + firstName + ' ' + lastName;</code><br>
+    This line concatenates the strings and variables <code>firstName</code> and <code>lastName</code> to form the sentence: <strong>'Hi, my name is Akash Singh'</strong>.
+  </p>
+
+  <strong>In JavaScript, the Temporal Dead Zone (TDZ) is the area of a block where a variable declared with let or const exists but cannot be accessed until it has been initialized.</strong>
+
+
+</body>
+</html>
