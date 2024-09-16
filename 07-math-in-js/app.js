@@ -72,5 +72,5 @@ console.log('Math.random():', randomValue);
 
 const width = +prompt('please enter the rectangle width');
 const height = +prompt('please enter the rectangle height');
-const area = console.log(width*height); 
-document.write(width*height);
+// const area = console.log(width*height); 
+document.write(`Area of the rectangle:${width * height}`);
