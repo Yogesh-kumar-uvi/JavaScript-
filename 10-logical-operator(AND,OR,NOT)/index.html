@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators in JavaScript</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logical Operators in JavaScript</h1>
+
+    <p>In JavaScript, logical operators are used to combine conditions or invert values. There are three main logical operators:</p>
+
+    <h2>1. Logical AND (<code>&&</code>)</h2>
+    <p>
+        The <strong>AND</strong> operator is used to check if multiple conditions are all true. It evaluates to <strong>true</strong> only if both of the conditions on either side of the operator are true. If one or both conditions are false, the result is <strong>false</strong>.
+    </p>
+
+    <!-- Table for Logical AND -->
+    <table>
+        <thead>
+            <tr>
+                <th>Condition 1</th>
+                <th>Condition 2</th>
+                <th>Result (Condition 1 && Condition 2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Logical OR (<code>||</code>)</h2>
+    <p>
+        The <strong>OR</strong> operator is used to check if at least one of the conditions is true. If one of the conditions is true, the entire expression evaluates to <strong>true</strong>. It evaluates to <strong>false</strong> only if both conditions are false.
+    </p>
+
+    <!-- Table for Logical OR -->
+    <table>
+        <thead>
+            <tr>
+                <th>Condition 1</th>
+                <th>Condition 2</th>
+                <th>Result (Condition 1 || Condition 2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Logical NOT (<code>!</code>)</h2>
+    <p>
+        The <strong>NOT</strong> operator is used to invert the value of a condition. If a condition is <strong>true</strong>, the NOT operator will make it <strong>false</strong>, and if the condition is <strong>false</strong>, it will make it <strong>true</strong>.
+    </p>
+
+    <!-- Table for Logical NOT -->
+    <table>
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>Result (!Condition)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Logical operators are essential for creating complex conditions in your JavaScript programs.</p>
+
+    <script src="app.js"></script>
+</body>
+</html>
