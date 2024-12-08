@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>what is switch case </h1>
+<p>In simple terms, a switch statement in JavaScript is a way to check a value against different options and run specific code depending on which option matches. It's like a menu where you pick an option and get the result based on your choice.</p>
+
+<h1>Difference Between Switch Case and If-Else</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Switch Case</th>
+            <th>If-Else</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Used for comparing a single value against multiple discrete options.</td>
+            <td>Used for handling complex conditions, ranges, or multiple expressions.</td>
+        </tr>
+        <tr>
+            <td>Uses strict equality (`===`) for comparisons.</td>
+            <td>Supports various conditions with logical operators and ranges.</td>
+        </tr>
+        <tr>
+            <td>More readable and organized when dealing with multiple fixed options.</td>
+            <td>Can become harder to read with many `else if` conditions.</td>
+        </tr>
+        <tr>
+            <td>Faster in some cases due to optimization in JavaScript engines (e.g., jump tables).</td>
+            <td>May be slower for many conditions because all `if` conditions are evaluated sequentially.</td>
+        </tr>
+        <tr>
+            <td>Works well when checking a single variable or expression.</td>
+            <td>Works well for checking multiple variables, ranges, or logical expressions.</td>
+        </tr>
+        <tr>
+            <td>Requires a `break` statement to avoid fall-through behavior.</td>
+            <td>Does not require `break` as each block executes independently.</td>
+        </tr>
+        <tr>
+            <td>Cannot handle ranges directly (e.g., `age >= 18 && age <= 25`).</td>
+            <td>Can handle ranges and logical conditions easily.</td>
+        </tr>
+        <tr>
+            <td>Includes an optional `default` case for unmatched conditions.</td>
+            <td>Includes an optional `else` block for unmatched conditions.</td>
+        </tr>
+    </tbody>
+</table>    
+    <script src="app.js"></script>
+</body>
+</html>
