@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.freeze() and Object.seal()</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding Object.freeze() and Object.seal()</h1>
+
+    <h2>What is <code>Object.freeze()</code>?</h2>
+    <p>
+        The <code>Object.freeze()</code> method is used to make an object completely immutable. Once an object is frozen:
+    </p>
+    <ul>
+        <li>You <b>cannot add</b> new properties to the object.</li>
+        <li>You <b>cannot modify</b> existing properties of the object.</li>
+        <li>You <b>cannot delete</b> properties from the object.</li>
+        <li>You <b>cannot change property descriptors</b> (like making a property writable again).</li>
+    </ul>
+    <p>In essence, a frozen object is "locked" and cannot be changed in any way.</p>
+
+    <h3>Use Case:</h3>
+    <p>Use <code>Object.freeze()</code> when you want to ensure that an object remains constant, such as for configuration settings or constants.</p>
+
+    <h2>What is <code>Object.seal()</code>?</h2>
+    <p>
+        The <code>Object.seal()</code> method restricts changes to an object's structure but still allows modifications to the values of existing properties. Once an object is sealed:
+    </p>
+    <ul>
+        <li>You <b>cannot add</b> new properties to the object.</li>
+        <li>You <b>cannot delete</b> existing properties from the object.</li>
+        <li>You <b>can modify</b> the values of existing properties.</li>
+    </ul>
+    <p>In essence, a sealed object has a fixed structure, but its contents can still be updated.</p>
+
+    <h3>Use Case:</h3>
+    <p>Use <code>Object.seal()</code> when you want to prevent structural changes to an object but still allow updates to its data.</p>
+
+    <h2>Comparison Between <code>Object.freeze()</code> and <code>Object.seal()</code></h2>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th><code>Object.freeze()</code></th>
+                <th><code>Object.seal()</code></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adding New Properties</td>
+                <td>❌ Not Allowed</td>
+                <td>❌ Not Allowed</td>
+            </tr>
+            <tr>
+                <td>Modifying Existing Properties</td>
+                <td>❌ Not Allowed</td>
+                <td>✅ Allowed</td>
+            </tr>
+            <tr>
+                <td>Deleting Properties</td>
+                <td>❌ Not Allowed</td>
+                <td>❌ Not Allowed</td>
+            </tr>
+            <tr>
+                <td>Changing Property Attributes</td>
+                <td>❌ Not Allowed</td>
+                <td>❌ Not Allowed</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Important Notes</h2>
+    <ul>
+        <li>Both methods only affect the object itself, not nested objects. To freeze or seal nested objects, you need to use recursion (deep freeze/seal).</li>
+        <li>In <b>strict mode</b>, attempts to modify, add, or delete properties on frozen or sealed objects will throw a <code>TypeError</code>.</li>
+    </ul>
+</body>
+</html>
