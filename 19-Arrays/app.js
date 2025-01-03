@@ -54,3 +54,54 @@ console.log(fruits.slice(1,3))
 
 //splice()  //it change the original array
 console.log(fruits.splice(2,1,'grapes'))
+
+// looping an array 
+//for loop
+const petAnimals = ['dog','cow','cat','goat']
+for (let i=0; i<petAnimals.length; i++){
+    console.log(petAnimals[i]);
+}
+
+// while loop
+let i =0;
+while(i<petAnimals.length){
+    console.log(petAnimals[i])
+    i++
+}
+
+//inbuilt Loop methods
+//map()
+const numbers=[1,2,3,4,5,6]
+const newNums = numbers.map((items,index,array)=>{
+return items + 5;
+})
+console.log(newNums)
+
+//filter()
+const newNumbers = numbers.filter((items,index,array)=>{
+    return items > 3;
+    })
+    console.log(newNumbers)
+
+//reduce
+const newNumber = numbers.reduce((prev,items)=>{
+    return prev + items;
+    },0)
+    console.log(newNumber)
+
+// spread and rest operators
+let num =[1,2,3]    
+let num2 =[4,5,6]  
+const finalNum = [num,num2]  
+console.log(finalNum)
+
+//spread
+let num0 =[1,2,3]    
+let num1 =[4,5,6]  
+const finalNumber = [...num,...num2]  
+console.log(finalNumber)
+
+function sum(...numbers){
+    return numbers;
+}
+console.log(sum(num0,num2));
