@@ -105,3 +105,4 @@ function sum(...numbers){
     return numbers;
 }
 console.log(sum(num0,num2));
+
